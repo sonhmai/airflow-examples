@@ -1,0 +1,13 @@
+# PersistentVolumeClaim is to PersistentVolume like what Pod is to Node
+# It is claim of a pod to the PersistentVolume resource (independent of Pod)
+apiVersion: v1
+kind: PersistentVolumeClaim
+metadata:
+  name: airflowdags-pv
+spec:
+  accessModes:
+    - ReadWriteOnce
+  capacity:
+    storage: 5Gi
+  hostPath:
+    path: /tmp/airflowdags-pvc/
