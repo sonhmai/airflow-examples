@@ -1,0 +1,6 @@
+COPY data
+FROM 's3://data/unpartitioned/data_2018.csv'
+ACCESS_KEY_ID 'RANDOM'
+SECRET_ACCESS_KEY 'random'
+IGNOREHEADER 1
+DELIMITER ','
